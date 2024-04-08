@@ -1,0 +1,5 @@
+{"level":"error","message":"n2 is incorrectly defined","service":"calculate-service"}
+{"level":"error","message":"n2 is 0, division by 0 is not allowed","service":"calculate-service"}
+{"level":"error","message":"n2 is 0, division by 0 is not allowed","service":"calculate-service"}
+{"level":"error","message":"n2 is incorrectly defined","service":"calculate-service"}
+{"level":"error","message":"n2 is incorrectly defined","service":"calculate-service"}
