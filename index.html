@@ -16,6 +16,7 @@
     <button onclick="calculate('divide')">Divide</button>
     <button onclick="calculate('exponent')">Exponent</button>
     <button onclick="calculate('modulo')">Modulo</button>
+    <button onclick="calculate('squareroot')">squareRoot</button>
     <p id="result"></p>
     <script>
        
@@ -23,7 +24,7 @@
             var n1 = $('#n1').val();
             var n2 = $('#n2').val();
             $.get(`http://localhost:3040/${operation}?n1=${n1}&n2=${n2}`, function (data, status) {
-                $('#result').html(data.data);
+                $('#result').html(String(operation)+" Result: " + data.data);
                 console.log(data.data);
             });
         }

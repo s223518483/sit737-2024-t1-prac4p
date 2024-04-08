@@ -244,8 +244,11 @@ app.get("/modulo", (req,res)=>{
 app.get("/squareRoot", (req,res)=>{
     try{
     const n1=parseFloat(req.query.n1);
+    const n2=parseFloat(req.query.n2);
     let flag = 0;
-    let result =0;
+    let result1 =0;
+    let result2 =0;
+    let result ="";
 
     if(isNaN(n1)) {
         flag = 1;
@@ -256,7 +259,9 @@ app.get("/squareRoot", (req,res)=>{
     logger.info('Parameters '+n1+' received for square root');
     if(flag!=1)
     {
-        result = squareRoot(n1);
+        result1 = squareRoot(n1);
+        result2 = squareRoot(n2);
+        result= result1.toString()+" and "+ result2.toString();
     }
    
     res.status(200).json({statuscocde:200, data: result }); 
